@@ -7,7 +7,7 @@ class Solution {
             playerMap[player] = index
             rankMap[index] = player
         }
-        callings.forEachIndexed { index, calling ->
+        callings.forEach { calling ->
             val callingIndex = playerMap[calling]!!
 
             val nextPlayerIndex = callingIndex - 1
