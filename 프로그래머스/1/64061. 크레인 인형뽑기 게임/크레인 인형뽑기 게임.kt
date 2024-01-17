@@ -22,9 +22,9 @@ class Solution {
         val size = picks.size
         val pick = picks.getOrNull(size - 2) ?: return
         if (pick == picks.last()) {
-            removed += 2
             repeat(2) {
                 picks.removeLast()
+                removed++
             }
         }
     }
