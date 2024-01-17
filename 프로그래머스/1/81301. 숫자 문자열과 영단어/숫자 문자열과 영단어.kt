@@ -1,16 +1,10 @@
 class Solution {
     fun solution(input: String): Int {
-        val numberText = input
-            .replace("zero", "0")
-            .replace("one", "1")
-            .replace("two", "2")
-            .replace("three", "3")
-            .replace("four", "4")
-            .replace("five", "5")
-            .replace("six", "6")
-            .replace("seven", "7")
-            .replace("eight", "8")
-            .replace("nine", "9")
-        return numberText.toInt()
+        var finalInput = input
+        val numbers = listOf("zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine")
+        numbers.forEachIndexed { index, number ->
+            finalInput = finalInput.replace(number, "$index")
+        }
+        return finalInput.toInt()
     }
 }
